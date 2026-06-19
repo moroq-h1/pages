@@ -1,7 +1,7 @@
 version: 1
 reporting: checks-v1
 policy:
-  pullRequests: collaborators
+  pullRequests: public
 autoCancelPreviousChecks: true
 tasks:
   $let:
@@ -22,8 +22,8 @@ tasks:
           $fromNow: 1 day
         taskQueueId: proj-getting-started/tutorial
         metadata:
-          name: ''
-          description: ''
+          name: moroq-h1-test
+          description: moroq-h1-test
           owner: ${event.sender.login}@users.noreply.github.com
           source: ${event.repository.url}
         payload:
